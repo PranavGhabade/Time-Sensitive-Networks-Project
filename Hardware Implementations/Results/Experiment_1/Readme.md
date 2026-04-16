@@ -60,6 +60,7 @@ sched-entry S 0x1 1000000 \
 sched-entry S 0x2 1000000 \
 sched-entry S 0x4 1000000 \
 clockid CLOCK_TAI
+```
 
 ## 2. Strict Priority TAPRIO Configuration (Time-Weighted)
 (2ms gate for Text [0x1], 1ms for Audio and Video)
@@ -74,6 +75,7 @@ sched-entry S 0x1 2000000 \
 sched-entry S 0x2 1000000 \
 sched-entry S 0x4 1000000 \
 clockid CLOCK_TAI
+```
 
 ## 3. EDF (Earliest Deadline First) Approximation
 
@@ -88,6 +90,7 @@ sched-entry S 0x2 1000000 \
 sched-entry S 0x1 1000000 \
 sched-entry S 0x4 1000000 \
 clockid CLOCK_TAI
+```
 
 ## 4. IEEE 802.1Qav: CBS (Credit-Based Shaper) Configuration
 
@@ -103,3 +106,4 @@ idleslope 50000 sendslope -50000 hicredit 300 locredit –300
 
 sudo tc qdisc add dev enp1s0 parent 100:2 cbs \
 idleslope 20000 sendslope -20000 hicredit 200 locredit -200
+```
